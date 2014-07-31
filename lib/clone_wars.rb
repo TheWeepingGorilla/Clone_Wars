@@ -1,28 +1,39 @@
 class Clone
-  attr_accessor :health
-  def initialize
+  attr_accessor :health, :name, :friend
+  def initialize (attributes)
     @health = 10
+    @name = attributes[:name]
+    @friend = attributes[:friend]
   end
 end
 
 class Brad < Clone
   @@brads = []
-  def initialize
+  def initialize (attributes)
     super
-    @eye_color = "blue"
     @@brads << self
   end
-  def brads
+  def Brad.brads
     @@brads
+  end
+  def Brad.clearBrads
+    @@brads = []
   end
 end
 
-# class Angelena < Clone
-#   def initialize
-#     super
-#     @eye_color = "grey"
-#   end
-# end
+class Angelena < Clone
+  @@angelenas = []
+  def initialize (attributes)
+    super
+    @@angelenas << self
+  end
+  def Angelena.angelenas
+    @@angelenas
+  end
+  def Angelena.clearAngelenas
+    @@angelenas = []
+  end
+end
 
 # class Scarlet < Clone
 #   def initialize
