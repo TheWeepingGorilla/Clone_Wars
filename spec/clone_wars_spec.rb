@@ -1,6 +1,7 @@
 require 'rspec'
 require 'pry'
-require 'clone_wars'
+require 'clone'
+require 'clone_war'
 
 describe 'Clone' do
   it "Instantiates a clone from the Clone class" do
@@ -84,3 +85,15 @@ it "Creates a Bill that inherits from the Clone class" do
   expect(Bill.bills[1].name).to eq "Bill One"
   end
 end
+
+describe 'CloneWar' do
+  it "Creates a clone war from the CloneWar class" do
+    test_war = CloneWar.new
+    expect(test_war).to be_an_instance_of CloneWar
+  end
+  it "Creates a new clone army" do
+    test_war = CloneWar.new
+    expect(test_war.computer_army[-1]).to be_an_instance_of Brad
+  end
+end
+
