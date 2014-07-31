@@ -35,12 +35,4 @@ class Angelena < Clone
   end
 end
 
-# class Scarlet < Clone
-#   def initialize
-#     super
-#     @eye_color = "green"
-#   end
-# end
 
-# class George < Clone
-#   def initialize
