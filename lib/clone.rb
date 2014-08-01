@@ -15,9 +15,9 @@ class Clone
   end
 end
 
-# This could be refactored to eliminate the seperate clone classes
-# (because having seperate arrays for each type of clone is inconvienent)
-# but for the sake of demonstrating inheritance I've left it as is.
+# This probably should be refactored to eliminate the seperate clone classes
+# (because having seperate arrays for each type of clone is inconvienent and messy)
+# but for the sake of the exercise of demonstrating inheritance I left it as is.
 # It seems weird to me that I can inherit methods but I can't
 # replace "@@clones" w/ "@@brads" or whatever without re-writing the methods.
 
